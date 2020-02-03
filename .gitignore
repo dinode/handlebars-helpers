@@ -1,0 +1,10 @@
+# always ignore files
+*.DS_Store
+.idea
+
+# npm
+node_modules
+npm-debug.log
+
+# yarn
+yarn-error.log
