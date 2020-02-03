@@ -1,7 +1,7 @@
 {
   "name": "handlebars-helpers",
-  "description": "More than 130 Handlebars helpers in ~20 categories. Helpers can be used with Assemble, Generate, Verb, Ghost, gulp-handlebars, grunt-handlebars, consolidate, or any node.js/Handlebars project.",
-  "version": "0.10.0",
+  "description": "Source taken from handlebars-helpers repo and is modified to keep minimal required functionality",
+  "version": "1.0.0",
   "repository": "helpers/handlebars-helpers",
   "license": "MIT",
   "scripts": {
