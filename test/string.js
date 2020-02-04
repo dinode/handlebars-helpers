@@ -409,4 +409,17 @@ describe("string", function() {
       assert.equal(fn(), "BENDER SHOULD NOT BE ALLOWED ON TV");
     });
   });
+
+  describe("replaceregex", function() {
+    it("should return an empty string if undefined", function() {
+      var fn = hbs.compile("{{replaceregex}}");
+      assert.equal(fn(), "");
+    });
+    it("should replace regex matches with replaceWith string hyphen", function() {
+      var fn = hbs.compile(
+        '{{replaceregex  "Bender should not be allowed on tv."  "[^a-zA-Z0-9-~_\\\\s]+" "-"}}'
+      );
+      assert.equal(fn(), "Bender-should-not-be-allowed-on-tv-");
+    });
+  });
 });
