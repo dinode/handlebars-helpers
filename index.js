@@ -7,7 +7,7 @@
 
 "use strict";
 
-var forIn = require("for-in");
+var forIn = require("lodash/forIn");
 var define = require("define-property");
 var lib = require("./lib/");
 
