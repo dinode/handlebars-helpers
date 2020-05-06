@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "array-sort": "^1.0.0",
-    "create-frame": "^1.0.0",
     "define-property": "^2.0.2",
+    "extend-shallow": "^3.0.2",
     "falsey": "^1.0.0",
     "get-object": "^0.2.0",
     "handlebars-utils": "^1.0.6",
