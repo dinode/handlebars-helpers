@@ -14,7 +14,7 @@
     "falsey": "^1.0.0",
     "get-object": "^0.2.0",
     "handlebars-utils": "^1.0.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0"
   },
   "devDependencies": {
