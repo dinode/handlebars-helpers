@@ -335,6 +335,14 @@ describe("array", function () {
     });
   });
 
+  describe("pluckIds", function () {
+    it("should get the _ids as JSON string from an array of objects", function () {
+      var ctx = { array: [{ _id: "x" }, { _id: "y" }, { _id: "z" }] };
+      var fn = hbs.compile('{{pluckIds array }}');
+      assert.equal(fn(ctx), JSON.stringify(["x", "y", "z"]));
+    });
+  });
+
   describe("some", function () {
     it("should render the first block if the callback returns true", function () {
       var ctx = { array: ["a", "b", "c"] };
