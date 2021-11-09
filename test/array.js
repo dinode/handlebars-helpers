@@ -336,6 +336,12 @@ describe("array", function () {
   });
 
   describe("pluckIds", function () {
+    it("should handle falsey arg value", function () {
+      var ctx = { array: undefined };
+      var fn = hbs.compile('{{pluckIds array }}');
+      assert.equal(fn(ctx), JSON.stringify([]));
+    });
+
     it("should get the _ids as JSON string from an array of objects", function () {
       var ctx = { array: [{ _id: "x" }, { _id: "y" }, { _id: "z" }] };
       var fn = hbs.compile('{{pluckIds array }}');
