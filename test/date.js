@@ -50,5 +50,19 @@ describe("date", function() {
         .subtract(2, "days")
         .toISOString());
     });
+
+    it("should format date", function () {
+      var fn = hbs.compile("{{formatdate '2022-02-01T00:00:00.000+11:00' 'YYYY-MM-DD'}}");
+
+      assert.equal(fn(), '2022-02-01');
+    });
+
+    it("should format date when combined with isodate", function () {
+      var fn = hbs.compile("{{formatdate (isodate 'today') 'YYYY-MM-DD'}}");
+
+      assert.equal(fn(), moment()
+        .startOf("day")
+        .format('YYYY-MM-DD'));
+    });
   });
 })

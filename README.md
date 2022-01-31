@@ -1366,6 +1366,15 @@ Iso date helper that renders the following datetimes in iso format
 * `method` **{string}**
 * `days` **{number}**
 * `returns` **{String}**: Iso datetime string of the given method's result
+### [{{formatdate}}](lib/date.js)
+
+Date helper that renders the date in provided format
+
+**Params**
+
+* `date` **{string}**
+* `format` **{string}**: Moment format
+* `returns` **{String}**: Date as a string in the provided format
 
 ### string
 ### [{{replaceregex}}](lib/string.js#L774)
