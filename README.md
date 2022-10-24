@@ -1459,6 +1459,23 @@ Return all of the items in the collection before the specified count. Opposite o
 {{/eachIndex}}
 ```
 
+### [{{flat}}](lib/array.js#L329)
+
+Flattens an array to the given `depth`
+
+**Params**
+
+* `array` **{Array}**
+* `depth` **{Number}**: The depth of arrays to flatten.
+* `returns` **{Array}**
+
+**Example**
+
+```handlebars
+{{flat "['a', 'b', 'c', ['d', ['e']]]" 2}}
+<!-- results in: '["a", "b", "c", "d", "e"]' -->
+```
+
 ### [{{filter}}](lib/array.js#L102)
 
 Block helper that filters the given array and renders the block for values that evaluate to `true`, otherwise the inverse block is returned.

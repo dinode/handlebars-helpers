@@ -76,6 +76,22 @@ describe("array", function () {
     });
   });
 
+  describe("flat", function () {
+    it("should flatten the array", function () {
+      var fn = hbs.compile("{{flat foo 1}}");
+      assert.equal(fn({ foo: ["a", "b", ["c"]] }), ["a", "b", "c"]);
+    });
+
+    it("should flatten the array", function () {
+      var fn = hbs.compile("{{flat foo 2}}");
+      assert.equal(fn({ foo: ["a", "b", ["c", ["d", ["e"]]]] }), ["a", "b", "c", "d", ["e"]]);
+    });
+
+    it("should return an empty string when undefined", function () {
+      assert.equal(hbs.compile("{{flat}}")(), "");
+    });
+  });
+
   describe("first", function () {
     it("should return the first item in a collection", function () {
       var fn = hbs.compile("{{first foo}}");
